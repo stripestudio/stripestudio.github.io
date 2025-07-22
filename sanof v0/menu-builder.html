@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Builder - Sanof Catering | Build Your Custom Menu</title>
+    <meta name="description" content="Build your perfect catering menu with Sanof Catering. Select from our variety of dishes and get a custom quote for your event.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/menu-builder.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🍽️</span>
+                <span class="logo-text">Sanof Catering</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="menu-builder.html" class="nav-link active">Menu Builder</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="quote.html" class="btn btn-primary">Get Quote</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="menu-hero">
+        <div class="container">
+            <div class="hero-badge">Menu Builder</div>
+            <h1>Build Your Perfect Menu</h1>
+            <p>Select from our carefully curated dishes to create a custom menu for your event. All prices are per person.</p>
+        </div>
+    </section>
+
+    <!-- Menu Builder -->
+    <section class="menu-builder">
+        <div class="container">
+            <div class="menu-builder-layout">
+                <!-- Menu Selection -->
+                <div class="menu-selection">
+                    <!-- Guest Count -->
+                    <div class="guest-count-section">
+                        <div class="card">
+                            <h3>Event Details</h3>
+                            <div class="guest-input">
+                                <label for="guestCount">Number of Guests:</label>
+                                <input type="number" id="guestCount" value="50" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category Tabs -->
+                    <div class="category-tabs">
+                        <button class="tab-button active" data-category="starters">
+                            <span class="tab-icon">🥗</span>
+                            <span>Starters</span>
+                        </button>
+                        <button class="tab-button" data-category="mains">
+                            <span class="tab-icon">🍖</span>
+                            <span>Main Courses</span>
+                        </button>
+                        <button class="tab-button" data-category="sides">
+                            <span class="tab-icon">🍚</span>
+                            <span>Sides</span>
+                        </button>
+                        <button class="tab-button" data-category="desserts">
+                            <span class="tab-icon">🍰</span>
+                            <span>Desserts</span>
+                        </button>
+                        <button class="tab-button" data-category="drinks">
+                            <span class="tab-icon">🥤</span>
+                            <span>Drinks</span>
+                        </button>
+                    </div>
+
+                    <!-- Menu Items -->
+                    <div class="menu-items" id="menuItems">
+                        <!-- Items will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <div class="summary-card">
+                        <div class="summary-header">
+                            <h3>
+                                <span class="summary-icon">🛒</span>
+                                Your Menu
+                            </h3>
+                        </div>
+                        <div class="summary-content" id="summaryContent">
+                            <div class="empty-summary">
+                                <p>Select items to build your menu</p>
+                            </div>
+                        </div>
+                        <div class="summary-footer" id="summaryFooter" style="display: none;">
+                            <div class="total-section">
+                                <div class="total-label">Total</div>
+                                <div class="total-amount" id="totalAmount">KSh 0</div>
+                            </div>
+                            <button class="btn btn-primary btn-large" id="getQuoteBtn">
+                                <span>Get Quote for This Menu</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🍽️</span>
+                        <span class="logo-text">Sanof Catering</span>
+                    </div>
+                    <p>Serving memorable experiences for over 20 years. From intimate gatherings to grand celebrations, we bring exceptional taste and professional service to every event in Thika and beyond.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+254 712 345 678</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span>info@sanofcatering.co.ke</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="menu-builder.html">Menu Builder</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Thika, Kiambu County, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💬</span>
+                            <span>WhatsApp: +254 712 345 678</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sanof Catering. All rights reserved. | Serving Thika with pride for over 20 years.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/menu-builder.js"></script>
+</body>
+</html>
